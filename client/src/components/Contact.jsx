@@ -14,7 +14,7 @@ const Contact = () => {
     setIsSubmitting(true);
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/v1/message/send",
+        "https://event-planning-7x7w.onrender.com/api/v1/message/send",
         {
           name,
           email,
@@ -107,7 +107,7 @@ const Contact = () => {
                 onChange={(e) => setMessage(e.target.value)}
                 required
               />
-              <button type="submit" disabled={isSubmitting}>
+              <button type="submit"  disabled={isSubmitting}>
                 {isSubmitting ? "Sending..." : "Send"}
               </button>
             </form>
