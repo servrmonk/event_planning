@@ -13,6 +13,10 @@ app.use(
   })
 );
 
+app.options("*", cors());
+console.log('Frontend URL:', process.env.FRONTEND_URL);
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api/v1/message", messageRouter);
